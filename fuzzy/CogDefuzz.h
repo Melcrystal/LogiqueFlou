@@ -3,7 +3,7 @@
 
 #include "MamdaniDefuzz.h"
 
-namespace core{
+namespace fuzzy{
 
 	template <class T>
 	class CogDefuzz:public MandaniDefuzz<T>{
@@ -19,7 +19,9 @@ namespace core{
 		MandaniDefuzz<T>(_min,_max,_step){
 	}
 
-
+	template <class T>
+	T CogDefuzz<T>::evaluate(Expression<T>* l,Expression<T>* r){
+	}
 
 }
 

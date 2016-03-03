@@ -3,7 +3,7 @@
 
 #include"BinaryExpression.h"
 
-namespace core{
+namespace fuzzy{
 
 	template <class T>
 		class MandaniDefuzz:public BinaryExpression<T>{
