@@ -1,7 +1,7 @@
 #ifndef MAMDANIDEFUZZ_H_INCLUDED
 #define MAMDANIDEFUZZ_H_INCLUDED
 
-#include"BinaryExpression.h"
+#include "../core/BinaryExpression.h"
 
 namespace fuzzy{
 
