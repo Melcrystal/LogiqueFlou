@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Framework" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Framework" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Framework" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="core/BinaryExpression.h" />
+		<Unit filename="core/BinaryExpressionModel.h" />
+		<Unit filename="core/BinaryShadowExpression.h" />
+		<Unit filename="core/CogDefuzz.h" />
+		<Unit filename="core/Expression.h" />
+		<Unit filename="core/FactoryExpression.h" />
+		<Unit filename="core/FuzzyFactory.h" />
+		<Unit filename="core/MamdaniDefuzz.h" />
+		<Unit filename="core/UnaryExpression.h" />
+		<Unit filename="core/UnaryExpressionModel.h" />
+		<Unit filename="core/UnaryShadowExpression.h" />
+		<Unit filename="core/ValueModel.h" />
+		<Unit filename="fuzzy/AggMax.h" />
+		<Unit filename="fuzzy/AggPlus.h" />
+		<Unit filename="fuzzy/AndMin.h" />
+		<Unit filename="fuzzy/AndMult.h" />
+		<Unit filename="fuzzy/IsBell.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="fuzzy/IsGaussian.h" />
+		<Unit filename="fuzzy/IsTrapezeLeft.h" />
+		<Unit filename="fuzzy/IsTrapezeRight.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="fuzzy/NotMinus1.h" />
+		<Unit filename="fuzzy/OrMax.h" />
+		<Unit filename="fuzzy/OrPlus.h" />
+		<Unit filename="fuzzy/ThenMin.h" />
+		<Unit filename="fuzzy/ThenMult.h" />
+		<Unit filename="fuzzy/isTriangle.h" />
+		<Unit filename="fuzzy/operators.h" />
+		<Unit filename="headers.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
