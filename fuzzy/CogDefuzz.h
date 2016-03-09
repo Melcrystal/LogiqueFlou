@@ -5,12 +5,12 @@
 
 namespace fuzzy{
 
-	template <class T>
-	class CogDefuzz:public MandaniDefuzz<T>{
+	template <class T>           // BORDEL DE MERDE CA, CA VA DANS OPERATORS.H S'IL TE PLAIT
+	class CogDefuzz:public fuzzy::MandaniDefuzz<T>{
 	public :
 		CogDefuzz(const T&,const T&,const T&);
 
-		T evaluate(Expression<T>*,Expression<T>*);
+		T evaluate(core::Expression<T>*,core::Expression<T>*);
 
 	};
 
@@ -20,7 +20,7 @@ namespace fuzzy{
 	}
 
 	template <class T>
-	T CogDefuzz<T>::evaluate(Expression<T>* l,Expression<T>* r){
+	T CogDefuzz<T>::evaluate(core::Expression<T>* l,core::Expression<T>* r){
 	}
 
 }

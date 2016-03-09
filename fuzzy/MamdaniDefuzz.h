@@ -6,13 +6,13 @@
 namespace fuzzy{
 
 	template <class T>
-		class MandaniDefuzz:public BinaryExpression<T>{
+	class MandaniDefuzz:public core::BinaryExpression<T>{
 
 		public :
 			MandaniDefuzz(const T&,const T&,const T&);
 			virtual ~MandaniDefuzz();
 
-			virtual T evaluate(Expression<T>*,Expression<T>*) const;
+			virtual T evaluate(core::Expression<T>*,core::Expression<T>*) const;
 
 
 		private:
@@ -25,7 +25,7 @@ namespace fuzzy{
 		}
 
 		template<class T>
-		T MandaniDefuzz<T>::evaluate(Expression<T>* l,Expression<T>* r) const{
+		T MandaniDefuzz<T>::evaluate(core::Expression<T>* l,core::Expression<T>* r) const{
 
 		}
 
