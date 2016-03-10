@@ -9,7 +9,7 @@ namespace core{
 	class UnaryExpressionModel : public UnaryExpression<T>, public Expression<T> {
 
 		public :
-			UnaryExpressionModel();
+			UnaryExpressionModel(UnaryExpression<T>*, Expression<T>*);
 			virtual ~UnaryExpressionModel();
 
 			virtual T evaluate();
@@ -18,8 +18,8 @@ namespace core{
             virtual UnaryExpression<T>* getOperator() const;
             virtual Expression<T>* getOperand() const;
 
-            virtual void setOperator(const UnaryExpression<T>*);
-            virtual void setOperand(const Expression<T>*);
+            virtual void setOperator(UnaryExpression<T>*);
+            virtual void setOperand(Expression<T>*);
 
 		private :
 			UnaryExpression<T> *op;
@@ -27,6 +27,11 @@ namespace core{
 
 	};
 
+	template <class T>
+	UnaryExpressionModel<T>::UnaryExpressionModel(UnaryExpression<T>*ope, Expression<T>*o):
+		op(ope),operand(o){
+			
+	}
 
 	template <class T>
 	UnaryExpressionModel<T>::~UnaryExpressionModel(){
@@ -55,12 +60,12 @@ namespace core{
 	}
 
 	template <class T>
-	 void UnaryExpressionModel<T>::setOperator(const UnaryExpression<T>* _op){
+	 void UnaryExpressionModel<T>::setOperator(UnaryExpression<T>* _op){
         op = _op;
 	}
 
 	template <class T>
-	 void UnaryExpressionModel<T>::setOperand(const Expression<T>* _operand){
+	 void UnaryExpressionModel<T>::setOperand(Expression<T>* _operand){
 			operand = _operand;
 	}
 

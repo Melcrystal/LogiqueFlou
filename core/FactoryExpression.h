@@ -2,8 +2,8 @@
 #define FACTORYEXPRESSION_H_INCLUDED
 
 #include "Expression.h"
-#include "UnaryExpression.h"
-#include "BinaryExpression.h"
+#include "UnaryExpressionModel.h"
+#include "BinaryExpressionModel.h"
 
 namespace core{
 
@@ -24,12 +24,12 @@ namespace core{
 
 	template <class T>
 	UnaryExpression<T>* FactoryExpression<T>::newUnaryExpression(UnaryExpression<T>*ope, Expression<T>*o){
-		return new UnaryExpression<T>(ope,o);
+		return new UnaryExpressionModel<T>(ope,o);
 	}
 
 	template <class T>
 	BinaryExpression<T>* FactoryExpression<T>::newBinaryExpression(BinaryExpression<T>* ope, Expression<T>*l, Expression<T>*r){
-		return new BinaryExpression<T>(ope,l,r);
+		return new BinaryExpressionModel<T>(ope,l,r);
 	}
 
 

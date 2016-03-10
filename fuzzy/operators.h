@@ -35,7 +35,7 @@ namespace fuzzy{
 	class MandaniDefuzz : public core::BinaryExpression<T>{
 		public :
 			MandaniDefuzz(const T&,const T&,const T&);
-			virtual ~MandaniDefuzz();
+			virtual ~MandaniDefuzz(){};
 
 			virtual T evaluate(core::Expression<T>*,core::Expression<T>*) const;
 
@@ -48,6 +48,7 @@ namespace fuzzy{
 	class CogDefuzz : public fuzzy::MandaniDefuzz<T>{
 		public :
 		CogDefuzz(const T&,const T&,const T&);
+		virtual ~CogDefuzz(){};
 
 		T evaluate(core::Expression<T>*,core::Expression<T>*);
 
@@ -60,6 +61,7 @@ namespace fuzzy{
 
 	template <class T>
 	T CogDefuzz<T>::evaluate(core::Expression<T>* l,core::Expression<T>* r){
+		return NULL;
 	}
 
 	template<class T>
@@ -70,6 +72,7 @@ namespace fuzzy{
 	template<class T>
 	T MandaniDefuzz<T>::evaluate(core::Expression<T>* l,core::Expression<T>* r) const{
 
+		return NULL;
 	}
 
 
