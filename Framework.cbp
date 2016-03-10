@@ -46,7 +46,6 @@
 		<Unit filename="fuzzy/AggPlus.h" />
 		<Unit filename="fuzzy/AndMin.h" />
 		<Unit filename="fuzzy/AndMult.h" />
-		<Unit filename="fuzzy/CogDefuzz.h" />
 		<Unit filename="fuzzy/IsBell.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

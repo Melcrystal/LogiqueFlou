@@ -15,8 +15,7 @@
 #include "fuzzy/OrPlus.h"
 #include "fuzzy/ThenMin.h"
 #include "fuzzy/ThenMult.h"
-#include "fuzzy/MamdaniDefuzz.h"
-#include "fuzzy/CogDefuzz.h"
+
 
 #include "core/BinaryExpression.h"
 #include "core/BinaryExpressionModel.h"
