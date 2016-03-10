@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+<<<<<<< HEAD
 	<File name="fuzzy\IsTrapezeRight.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="660" topLine="16" />
@@ -14,15 +15,36 @@
 	<File name="fuzzy\IsTrapezeLeft.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="716" topLine="16" />
+=======
+	<File name="core\FactoryExpression.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="666" topLine="14" />
 		</Cursor>
 	</File>
-	<File name="fuzzy\OrPlus.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="core\BinaryShadowExpression.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="340" topLine="0" />
+			<Cursor1 position="354" topLine="10" />
 		</Cursor>
 	</File>
-	<File name="fuzzy\ThenMin.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="core\FuzzyFactory.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
+			<Cursor1 position="2801" topLine="67" />
+		</Cursor>
+	</File>
+	<File name="core\BinaryExpressionModel.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1506" topLine="56" />
+>>>>>>> origin/master
+		</Cursor>
+	</File>
+	<File name="fuzzy\operators.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="657" topLine="27" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+<<<<<<< HEAD
 			<Cursor1 position="280" topLine="0" />
 		</Cursor>
 	</File>
@@ -144,6 +166,9 @@
 	<File name="fuzzy\MamdaniDefuzz.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="201" topLine="0" />
+=======
+			<Cursor1 position="1345" topLine="26" />
+>>>>>>> origin/master
 		</Cursor>
 	</File>
 	<File name="core\BinaryExpression.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
