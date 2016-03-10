@@ -28,6 +28,11 @@ namespace core{
 				return target->evaluate(l,r);
 		}
 
+		template <class T>
+		void BinaryShadowExpression<T>::setTarget(BinaryExpression<T>* e){
+            target = e;
+		}
+
 
 }
 

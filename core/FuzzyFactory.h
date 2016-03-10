@@ -47,42 +47,42 @@ namespace core{
 
     template <class T>
 	BinaryExpression<T>* FuzzyFactory<T>::newAnd(Expression<T>*l,Expression<T>*r){
-		return newBinaryExpression(And,l,r);
+		return new BinaryExpression<T>(And,l,r);
 	}
 
 	template <class T>
 	BinaryExpression<T>* FuzzyFactory<T>::newOr(Expression<T>* l, Expression<T>* r){
-		return newBinaryExpression(Or,l,r);
+		return new BinaryExpression<T>(Or,l,r);
 	}
 
 	template <class T>
 	BinaryExpression<T>* FuzzyFactory<T>::newThen(Expression<T>* l, Expression<T>* r){
-		return newBinaryExpression(Then, l, r);
+		return new BinaryExpression<T>(Then, l, r);
 	}
 
 	template <class T>
 	BinaryExpression<T>* FuzzyFactory<T>::newAgg(Expression<T>* l, Expression<T>* r){
-		return newBinaryExpression(Agg, l, r);
+		return new BinaryExpression<T>(Agg, l, r);
 	}
 
 	template <class T>
 	BinaryExpression<T>* FuzzyFactory<T>::newDefuzz(Expression<T>* l, Expression<T>* r){
-		return newBinaryExpression(Defuzz, l, r);
+		return new BinaryExpression<T>(Defuzz, l, r);
 	}
 
 	template <class T>
 	UnaryExpression<T>* FuzzyFactory<T>::newNot(Expression<T>* o){
-		return newUnaryExpression(Not, o);
+		return new UnaryExpression<T>(Not, o);
 	}
 
 	template <class T>
 	UnaryExpression<T>* FuzzyFactory<T>::newIs(fuzzy::Is<T>* is, Expression<T>* o){
-		return newUnaryExpression(is, o);
+		return new UnaryExpression<T>(is, o);
 	}
 
 	template <class T>
 	void FuzzyFactory<T>::changeAnd(fuzzy::And<T>* o){
-		And.setTarget(o);
+		And->setTarget(o);
 	}
 
 	template <class T>

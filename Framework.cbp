@@ -5,7 +5,6 @@
 		<Option title="Framework" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="core\;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Framework" prefix_auto="1" extension_auto="1" />
@@ -33,9 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="NaryExpressionModel.h">
-			<Option virtualFolder="core/" />
-		</Unit>
 		<Unit filename="core/BinaryExpression.h" />
 		<Unit filename="core/BinaryExpressionModel.h" />
 		<Unit filename="core/BinaryShadowExpression.h" />
