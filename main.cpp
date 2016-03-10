@@ -27,26 +27,25 @@ int main(){
 	core::ValueModel<int> tips(0);
 
 	core::Expression<int> *r =
-		f.newAgg(
-				f.newAgg(
-							f.newThen(
-											f.newIs(&poor, &service),
-											f.newIs(&cheap,&tips)
+		(core::Expression<int>*)f.newAgg(
+				(core::Expression<int>*)f.newAgg(
+							(core::Expression<int>*)f.newThen(
+											(core::Expression<int>*)f.newIs(&poor, &service),
+											(core::Expression<int>*)f.newIs(&cheap,&tips)
 							),
-							f.newThen(
-											f.newIs(&good,&service),
-											f.newIs(&average,&tips)
+							(core::Expression<int>*)f.newThen(
+											(core::Expression<int>*)f.newIs(&good,&service),
+											(core::Expression<int>*)f.newIs(&average,&tips)
 						))
 				,
-							f.newThen(
-										f.newIs(&excellent,&service),
-										f.newIs(&generous,&tips)
+							(core::Expression<int>*)f.newThen(
+										(core::Expression<int>*)f.newIs(&excellent,&service),
+										(core::Expression<int>*)f.newIs(&generous,&tips)
 							)
-				)
-		);
+				);
 
 
-	core::Expression<int> *system = f.newDefuzz(&tips,r);
+	core::Expression<int> *system = (core::Expression<int>*)f.newDefuzz(&tips,r);
 
 	float s;
 	while (true){
