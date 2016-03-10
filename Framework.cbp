@@ -32,12 +32,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="NaryExpressionModel.h" />
 		<Unit filename="core/BinaryExpression.h" />
 		<Unit filename="core/BinaryExpressionModel.h" />
 		<Unit filename="core/BinaryShadowExpression.h" />
 		<Unit filename="core/Expression.h" />
 		<Unit filename="core/FactoryExpression.h" />
 		<Unit filename="core/FuzzyFactory.h" />
+		<Unit filename="core/NaryExpression.h" />
+		<Unit filename="core/NaryShadowExpression.h" />
 		<Unit filename="core/UnaryExpression.h" />
 		<Unit filename="core/UnaryExpressionModel.h" />
 		<Unit filename="core/UnaryShadowExpression.h" />

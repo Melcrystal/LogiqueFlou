@@ -4,7 +4,6 @@
 #include"NaryExpression.h"
 #include"Expression.h"
 
-http://fr.nametests.com/test/result/guilhem-/10716862130/namespace core
 {
     template <class T>
 	class NaryExpressionModel :public Expression<T>, public NaryExpression<T>
@@ -15,5 +14,27 @@ http://fr.nametests.com/test/result/guilhem-/10716862130/namespace core
 
         T evaluate() const;
         T evaluate(vector<const Expression<T>*>*) const;
+        private:
+			NaryExpression<T> ope;
+			std::vector<Expression<T>> operands;
+	};
+
+	template <class T>
+	NaryExpressionModel<T>::NaryExpressionModel(NaryExpression<T> _ope, std::vector<Expression<T>> _operands) :
+		ope(_ope), operands(_operands)
+	{}
+
+	template <class T>
+	T NaryExpressionModel<T>::evaluate() const
+	{
+		if (operands != null)
+			return evaluate(operands);
 	}
+
+	template <class T>
+	T NaryExpressionModel<T>::evaluate(vector<const Expression<T>*>* o)  const
+	{
+		if (ope != null)
+			ope.evaluate(o);
+    }
 }
