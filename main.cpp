@@ -9,7 +9,7 @@ int main(){
 	fuzzy::OrMax<int> opOr;
 	fuzzy::ThenMin<int> opThen;
 	fuzzy::AggMax<int> opAgg;
-	CogDefuzz<int> opDefuzz(0,20,5);
+	fuzzy::CogDefuzz<int> opDefuzz(0,20,5);
 
 	FuzzyFactory<int> f(&opNot,&opAnd,&opOr,&opThen,&opAgg,&opDefuzz);
 
