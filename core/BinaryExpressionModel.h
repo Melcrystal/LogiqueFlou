@@ -9,7 +9,7 @@ template <class T>
 class BinaryExpressionModel : public BinaryExpression<T>, public Expression<T> {
 
 	public :
-		BinaryExpressionModel();
+		BinaryExpressionModel(BinaryExpression<T>*, Expression<T>*, Expression<T>*);
 		virtual ~BinaryExpressionModel();
 
 		virtual T evaluate();
@@ -29,6 +29,11 @@ class BinaryExpressionModel : public BinaryExpression<T>, public Expression<T> {
 		Expression<T>* right;
 
 };
+
+template <class T>
+BinaryExpressionModel<T>::BinaryExpressionModel(BinaryExpression<T>* ope, Expression<T>*l, Expression<T>*r) :
+	operator_(ope),left(l),right(r){
+}
 
 template <class T>
 	BinaryExpressionModel<T>::~BinaryExpressionModel(){
