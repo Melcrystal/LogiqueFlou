@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="SugenoDefuzz.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="core/BinaryExpression.h" />
 		<Unit filename="core/BinaryExpressionModel.h" />
 		<Unit filename="core/BinaryShadowExpression.h" />
