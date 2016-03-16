@@ -3,7 +3,7 @@
 
 #include "BinaryExpression.h"
 
-using namespace  core;
+namespace core{
 
 template <class T>
 class BinaryExpressionModel : public BinaryExpression<T>, public Expression<T> {
@@ -82,4 +82,5 @@ T BinaryExpressionModel<T>::evaluate(core::Expression<T>* l, core::Expression<T>
 		right = _right;
 	}
 
+}
 #endif // BINARYEXPRESSIONMODEL_H_INCLUDED

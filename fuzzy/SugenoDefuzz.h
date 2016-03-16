@@ -35,10 +35,10 @@ namespace fuzzy{
 		{
 			core::BinaryExpressionModel<T>*  bem = (core::BinaryExpressionModel<T>*)(*it);
 			core::BinaryShadowExpression<T>* bse = (core::BinaryShadowExpression<T>*) bem->getOperator();
-			SugenoThen<T>* suth = (SugenoThen<T>*)bse->getTarget();
+			//SugenoThen<T>* suth = (SugenoThen<T>*)bse->getTarget();
 
 			num += (*it)->evaluate();
-			den += suth->premiseValue();
+			//den += suth->premiseValue();
 		}
 
 		if (den != 0)
@@ -48,10 +48,7 @@ namespace fuzzy{
 	}
 
 
-
-
-
 }
 
-
+#endif // SUGENODEFUZZ_H
 

@@ -1,0 +1,118 @@
+# depslib dependency file v1.0
+1457597799 source:c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\main.cpp
+	<iostream>
+	"headers.h"
+
+1458113104 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\headers.h
+	"fuzzy/AggMax.h"
+	"fuzzy/AggPlus.h"
+	"fuzzy/AndMin.h"
+	"fuzzy/AndMult.h"
+	"fuzzy/IsBell.h"
+	"fuzzy/IsTrapezeLeft.h"
+	"fuzzy/IsTrapezeRight.h"
+	"fuzzy/isTriangle.h"
+	"fuzzy/NotMinus1.h"
+	"fuzzy/operators.h"
+	"fuzzy/OrMax.h"
+	"fuzzy/OrPlus.h"
+	"fuzzy/ThenMin.h"
+	"fuzzy/ThenMult.h"
+	"fuzzy/SugenoDefuzz.h"
+	"core/BinaryExpression.h"
+	"core/BinaryExpressionModel.h"
+	"core/Expression.h"
+	"core/FactoryExpression.h"
+	"core/FuzzyFactory.h"
+	"core/UnaryExpression.h"
+	"core/UnaryExpressionModel.h"
+	"core/ValueModel.h"
+	"core/BinaryShadowExpression.h"
+	"core/UnaryShadowExpression.h"
+
+1456687073 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\aggmax.h
+	"../core/Expression.h"
+	"../core/BinaryExpression.h"
+	"operators.h"
+
+1456741400 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\expression.h
+
+1456740828 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\binaryexpression.h
+	"Expression.h"
+
+1457623772 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\operators.h
+	"../core/BinaryExpression.h"
+	"../core/UnaryExpression.h"
+
+1456740828 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\unaryexpression.h
+	"Expression.h"
+
+1456687474 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\aggplus.h
+
+1456743000 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\andmin.h
+
+1456686905 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\andmult.h
+
+1456687511 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\isbell.h
+	"../core/Expression.h"
+	"operators.h"
+
+1456687847 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\istrapezeleft.h
+	"../core/Expression.h"
+	"operators.h"
+
+1456687983 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\istrapezeright.h
+	"../core/Expression.h"
+	"operators.h"
+
+1456741359 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\istriangle.h
+	"../core/Expression.h"
+	"operators.h"
+
+1456687716 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\notminus1.h
+	"../core/Expression.h"
+	"operators.h"
+
+1456687674 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\ormax.h
+
+1456687682 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\orplus.h
+
+1456686831 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\thenmin.h
+
+1456686999 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\thenmult.h
+
+1458113189 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\binaryexpressionmodel.h
+	"BinaryExpression.h"
+
+1457623577 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\factoryexpression.h
+	"Expression.h"
+	"UnaryExpressionModel.h"
+	"BinaryExpressionModel.h"
+
+1457623452 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\unaryexpressionmodel.h
+	"UnaryExpression.h"
+
+1457623643 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\fuzzyfactory.h
+	"FactoryExpression.h"
+	"../fuzzy/operators.h"
+	"Expression.h"
+	"BinaryShadowExpression.h"
+	"UnaryShadowExpression.h"
+
+1457599796 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\binaryshadowexpression.h
+
+1456725483 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\unaryshadowexpression.h
+
+1456991860 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\valuemodel.h
+	"Expression.h"
+
+1458113227 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\fuzzy\sugenodefuzz.h
+	"..\core\NaryExpression.h"
+	"..\core\BinaryExpressionModel.h"
+	"..\core\BinaryShadowExpression.h"
+	<vector>
+
+1458113150 c:\users\wildcerebrus\desktop\cours 2a\framekwork flou\framework\logiqueflou\core\naryexpression.h
+	"Expression.h"
+	<vector>
+
