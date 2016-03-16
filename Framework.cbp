@@ -32,9 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="SugenoDefuzz.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="core/BinaryExpression.h" />
 		<Unit filename="core/BinaryExpressionModel.h" />
 		<Unit filename="core/BinaryShadowExpression.h" />
@@ -64,6 +61,7 @@
 		<Unit filename="fuzzy/NotMinus1.h" />
 		<Unit filename="fuzzy/OrMax.h" />
 		<Unit filename="fuzzy/OrPlus.h" />
+		<Unit filename="fuzzy/SugenoDefuzz.h" />
 		<Unit filename="fuzzy/ThenMin.h" />
 		<Unit filename="fuzzy/ThenMult.h" />
 		<Unit filename="fuzzy/isTriangle.h" />
