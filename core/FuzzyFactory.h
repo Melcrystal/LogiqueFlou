@@ -28,7 +28,7 @@ namespace core{
 			void changeOr(fuzzy::Or<T>*);
 			void changeThen(fuzzy::Then<T>*);
 
-			T evaluate();
+			T evaluate();    //Fonction pas encore codee
 
 		private:
 			BinaryShadowExpression<T> *And, *Or, *Then, *Agg, *Defuzz;
@@ -44,7 +44,12 @@ namespace core{
 	FuzzyFactory<T>::~FuzzyFactory(){
         delete And,Or,Then,Agg,Defuzz,Not;
 	}
+/*******************************/
+	template <class T>
+	T FuzzyFactory<T>::evaluate(){
 
+	}
+/*****************************************/
     template <class T>
 	BinaryExpression<T>* FuzzyFactory<T>::newAnd(Expression<T>*l,Expression<T>*r){
 		return this->newBinaryExpression(And,l,r);
@@ -94,7 +99,6 @@ namespace core{
 	void FuzzyFactory<T>::changeThen(fuzzy::Then<T>* o){
 		Then.setTarget(o);
 	}
-
 
 }
 

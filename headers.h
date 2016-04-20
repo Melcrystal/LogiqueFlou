@@ -16,6 +16,8 @@
 #include "fuzzy/ThenMin.h"
 #include "fuzzy/ThenMult.h"
 #include "fuzzy/SugenoDefuzz.h"
+#include "fuzzy/SugenoConclusion.h"
+#include "fuzzy/SugenoThen.h"
 
 
 #include "core/BinaryExpression.h"

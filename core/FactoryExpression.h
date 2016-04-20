@@ -12,7 +12,7 @@ namespace core{
 
 		public:
 
-			Expression<T>* Hold(Expression<T>*);
+			Expression<T>* Hold(Expression<T>*); // Attention, HOLD a faire
             UnaryExpression<T>* newUnaryExpression(UnaryExpression<T>*, Expression<T>*);
             BinaryExpression<T>* newBinaryExpression(BinaryExpression<T>*, Expression<T>*, Expression<T>*);
 
