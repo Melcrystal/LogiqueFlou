@@ -4,6 +4,7 @@
 #include "Expression.h"
 #include "UnaryExpressionModel.h"
 #include "BinaryExpressionModel.h"
+#include <set>
 
 namespace core{
 
@@ -12,24 +13,30 @@ namespace core{
 
 		public:
 
-			Expression<T>* Hold(Expression<T>*); // Attention, HOLD a faire
-            UnaryExpression<T>* newUnaryExpression(UnaryExpression<T>*, Expression<T>*);
-            BinaryExpression<T>* newBinaryExpression(BinaryExpression<T>*, Expression<T>*, Expression<T>*);
+			Expression<T>* hold(Expression<T>*); 
+            Expression<T>* newUnaryExpression(UnaryExpression<T>*, Expression<T>*);
+            Expression<T>* newBinaryExpression(BinaryExpression<T>*, Expression<T>*, Expression<T>*);
 
 
 		private:
-			Expression<T>* memory;
+			std::set<Expression<T>*> memory;
 
 	};
 
 	template <class T>
-	UnaryExpression<T>* FactoryExpression<T>::newUnaryExpression(UnaryExpression<T>*ope, Expression<T>*o){
-		return new UnaryExpressionModel<T>(ope,o);
+	Expression<T>* FactoryExpression<T>::hold(Expression<T>* exp){
+		memory.insert(exp);
+		return exp;
 	}
 
 	template <class T>
-	BinaryExpression<T>* FactoryExpression<T>::newBinaryExpression(BinaryExpression<T>* ope, Expression<T>*l, Expression<T>*r){
-		return new BinaryExpressionModel<T>(ope,l,r);
+	Expression<T>* FactoryExpression<T>::newUnaryExpression(UnaryExpression<T>*ope, Expression<T>*o){
+		return hold(new UnaryExpressionModel<T>(ope,o));
+	}
+
+	template <class T>
+	Expression<T>* FactoryExpression<T>::newBinaryExpression(BinaryExpression<T>* ope, Expression<T>*l, Expression<T>*r){
+		return hold(new BinaryExpressionModel<T>(ope,l,r));
 	}
 
 
