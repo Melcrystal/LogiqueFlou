@@ -10,24 +10,26 @@ namespace fuzzy{
     class IsTrapezeLeft : public Is<T>{
 
 		public:
-            IsTrapezeLeft(const T& , const T& );
+            IsTrapezeLeft(const T& , const T& , const T&);
             ~IsTrapezeLeft();
 
             T evaluate(core::Expression<T>*);
 
             T getMin();
             T getMax();
+			T getMid();
 
             void setMin(T&);
             void setMax(T&);
+			void setMid(T&);
 
 		private :
-			T min, max;
+			T min, max, mid;
     };
 
         template <class T>
-        IsTrapezeLeft<T>::IsTrapezeLeft(const T& min_, const T& max_):
-        	min(min_),max(max_){
+        IsTrapezeLeft<T>::IsTrapezeLeft(const T& min_, const T& mid_, const T& max_):
+        	min(min_),max(max_),mid(mid_){
         }
 
 		template <class T>
@@ -39,7 +41,7 @@ namespace fuzzy{
 			T ev = e->evaluate();
 
             if (ev <= min) return 0;
-            return (ev >= max)? 1: (ev-min)/(max-min);
+            return (ev >= mid)? 1: (ev-max)/(mid-max);
         }
 
 		 template <class T>
@@ -53,6 +55,11 @@ namespace fuzzy{
 		}
 
 		template <class T>
+		T IsTrapezeLeft<T>::getMid(){
+			return mid;
+		}
+
+		template <class T>
 		void IsTrapezeLeft<T>::setMin(T& _min){
 			min = _min;
 		}
@@ -62,6 +69,10 @@ namespace fuzzy{
 			max = _max;
 		}
 
+		template <class T>
+		void IsTrapezeLeft<T>::setMid(T& _mid){
+			mid = _mid;
+		}
 
 }
 

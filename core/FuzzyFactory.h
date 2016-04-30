@@ -16,19 +16,19 @@ namespace core{
 			FuzzyFactory(UnaryExpression<T>*, BinaryExpression<T>*, BinaryExpression<T>*, BinaryExpression<T>*,BinaryExpression<T>*, BinaryExpression<T>*);
 			virtual ~FuzzyFactory();
 
-			BinaryExpression<T>* newAnd(Expression<T>*, Expression<T>*);
-			BinaryExpression<T>* newOr(Expression<T>*, Expression<T>*);
-			BinaryExpression<T>* newThen(Expression<T>*, Expression<T>*);
-			BinaryExpression<T>* newAgg(Expression<T>*, Expression<T>*);
-			BinaryExpression<T>* newDefuzz(Expression<T>*, Expression<T>*);
-			UnaryExpression<T>* newNot(Expression<T>*);
-			UnaryExpression<T>* newIs(fuzzy::Is<T>*, Expression<T>*);
+			Expression<T>* newAnd(Expression<T>*, Expression<T>*);
+			Expression<T>* newOr(Expression<T>*, Expression<T>*);
+			Expression<T>* newThen(Expression<T>*, Expression<T>*);
+			Expression<T>* newAgg(Expression<T>*, Expression<T>*);
+			Expression<T>* newDefuzz(Expression<T>*, Expression<T>*);
+			Expression<T>* newNot(Expression<T>*);
+			Expression<T>* newIs(fuzzy::Is<T>*, Expression<T>*);
 
 			void changeAnd(fuzzy::And<T>*);
 			void changeOr(fuzzy::Or<T>*);
 			void changeThen(fuzzy::Then<T>*);
 
-			T evaluate();    //Fonction pas encore codee
+			//T evaluate();    //Fonction pas encore codee
 
 		private:
 			BinaryShadowExpression<T> *And, *Or, *Then, *Agg, *Defuzz;
@@ -44,44 +44,44 @@ namespace core{
 	FuzzyFactory<T>::~FuzzyFactory(){
         delete And,Or,Then,Agg,Defuzz,Not;
 	}
-/*******************************/
+/******************************
 	template <class T>
 	T FuzzyFactory<T>::evaluate(){
 
 	}
 /*****************************************/
     template <class T>
-	BinaryExpression<T>* FuzzyFactory<T>::newAnd(Expression<T>*l,Expression<T>*r){
+	Expression<T>* FuzzyFactory<T>::newAnd(Expression<T>*l,Expression<T>*r){
 		return this->newBinaryExpression(And,l,r);
 	}
 
 	template <class T>
-	BinaryExpression<T>* FuzzyFactory<T>::newOr(Expression<T>* l, Expression<T>* r){
+	Expression<T>* FuzzyFactory<T>::newOr(Expression<T>* l, Expression<T>* r){
 		return this->newBinaryExpression(Or,l,r);
 	}
 
 	template <class T>
-	BinaryExpression<T>* FuzzyFactory<T>::newThen(Expression<T>* l, Expression<T>* r){
+	Expression<T>* FuzzyFactory<T>::newThen(Expression<T>* l, Expression<T>* r){
 		return this->newBinaryExpression(Then, l, r);
 	}
 
 	template <class T>
-	BinaryExpression<T>* FuzzyFactory<T>::newAgg(Expression<T>* l, Expression<T>* r){
+	Expression<T>* FuzzyFactory<T>::newAgg(Expression<T>* l, Expression<T>* r){
 		return this->newBinaryExpression(Agg, l, r);
 	}
 
 	template <class T>
-	BinaryExpression<T>* FuzzyFactory<T>::newDefuzz(Expression<T>* l, Expression<T>* r){
+	Expression<T>* FuzzyFactory<T>::newDefuzz(Expression<T>* l, Expression<T>* r){
 		return this->newBinaryExpression(Defuzz, l, r);
 	}
 
 	template <class T>
-	UnaryExpression<T>* FuzzyFactory<T>::newNot(Expression<T>* o){
+	Expression<T>* FuzzyFactory<T>::newNot(Expression<T>* o){
 		return this->newUnaryExpression(Not, o);
 	}
 
 	template <class T>
-	UnaryExpression<T>* FuzzyFactory<T>::newIs(fuzzy::Is<T>* is, Expression<T>* o){
+	Expression<T>* FuzzyFactory<T>::newIs(fuzzy::Is<T>* is, Expression<T>* o){
 		return this->newUnaryExpression(is, o);
 	}
 

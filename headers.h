@@ -6,6 +6,7 @@
 #include "fuzzy/AndMin.h"
 #include "fuzzy/AndMult.h"
 #include "fuzzy/IsBell.h"
+#include "fuzzy/isTrapeze.h"
 #include "fuzzy/IsTrapezeLeft.h"
 #include "fuzzy/IsTrapezeRight.h"
 #include "fuzzy/isTriangle.h"
@@ -19,7 +20,7 @@
 #include "fuzzy/SugenoConclusion.h"
 #include "fuzzy/SugenoThen.h"
 
-
+#include "core/Evalutation.h"
 #include "core/BinaryExpression.h"
 #include "core/BinaryExpressionModel.h"
 #include "core/Expression.h"

@@ -10,7 +10,7 @@ namespace fuzzy{
 	class isTriangle : public Is<T>{
 
 		public :
-			isTriangle(T, T, T);
+			isTriangle(T&, T&, T&);
 			~isTriangle();
 
 			T evaluate(core::Expression<T>*);
@@ -22,6 +22,7 @@ namespace fuzzy{
 			void setMax(T&);
 			void setMid(T&);
 			void setMin(T&);
+			
 
 
 		private:
@@ -30,7 +31,7 @@ namespace fuzzy{
 	};
 
     template <class T>
-    isTriangle<T>::isTriangle(T min_, T mid_, T max_):
+    isTriangle<T>::isTriangle(T& min_, T& mid_, T& max_):
     	min(min_),mid(mid_),max(max_){
     }
 

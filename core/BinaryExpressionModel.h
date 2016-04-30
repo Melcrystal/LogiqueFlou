@@ -5,10 +5,10 @@
 
 namespace core{
 
-template <class T>
-class BinaryExpressionModel : public BinaryExpression<T>, public Expression<T> {
+	template <class T>
+	class BinaryExpressionModel : public BinaryExpression<T>, public Expression<T> {
 
-	public :
+	public:
 		BinaryExpressionModel(BinaryExpression<T>*, Expression<T>*, Expression<T>*);
 		virtual ~BinaryExpressionModel();
 
@@ -23,62 +23,64 @@ class BinaryExpressionModel : public BinaryExpression<T>, public Expression<T> {
 		virtual void setLeft(Expression<T>*);
 		virtual void setRight(Expression<T>*);
 
-	private :
+	private:
 		BinaryExpression<T>* operator_;
 		Expression<T>* left;
 		Expression<T>* right;
 
-};
+	};
 
-template <class T>
-BinaryExpressionModel<T>::BinaryExpressionModel(BinaryExpression<T>* ope, Expression<T>*l, Expression<T>*r) :
-	operator_(ope),left(l),right(r){
-}
+	template <class T>
+	BinaryExpressionModel<T>::BinaryExpressionModel(BinaryExpression<T>* ope, Expression<T>*l, Expression<T>*r) :
+		operator_(ope), left(l), right(r){
+	}
 
-template <class T>
+	template <class T>
 	BinaryExpressionModel<T>::~BinaryExpressionModel(){
 	}
 
 
-template <class T>
-T BinaryExpressionModel<T>::evaluate(){
-	if (left != NULL && right != NULL)
-		return evaluate(left,right);
-}
-
-template <class T>
-T BinaryExpressionModel<T>::evaluate(core::Expression<T>* l, core::Expression<T>* r){
-	if (operator_ != NULL)
-		return operator_->evaluate(l,r);
-}
+	template <class T>
+	T BinaryExpressionModel<T>::evaluate(){
+		if (left != nullptr && right != nullptr)
+			return evaluate(left, right);
+		throw nullptr;
+	}
 
 	template <class T>
-	 BinaryExpression<T>* BinaryExpressionModel<T>::getOperator() const{
+	T BinaryExpressionModel<T>::evaluate(core::Expression<T>* l, core::Expression<T>* r){
+		if (operator_ != NULL)
+			return operator_->evaluate(l, r);
+		throw nullptr;
+	}
+
+	template <class T>
+	BinaryExpression<T>* BinaryExpressionModel<T>::getOperator() const{
 		return operator_;
 	}
 
 	template <class T>
-	 Expression<T>* BinaryExpressionModel<T>::getLeft() const{
+	Expression<T>* BinaryExpressionModel<T>::getLeft() const{
 		return left;
 	}
 
 	template <class T>
-	 Expression<T>* BinaryExpressionModel<T>::getRight() const{
+	Expression<T>* BinaryExpressionModel<T>::getRight() const{
 		return right;
 	}
 
 	template <class T>
-	 void BinaryExpressionModel<T>::setOperator(BinaryExpression<T>* _operator){
+	void BinaryExpressionModel<T>::setOperator(BinaryExpression<T>* _operator){
 		operator_ = _operator;
 	}
 
 	template <class T>
-	 void BinaryExpressionModel<T>::setLeft(Expression<T>* _left){
+	void BinaryExpressionModel<T>::setLeft(Expression<T>* _left){
 		left = _left;
 	}
 
 	template <class T>
-	 void BinaryExpressionModel<T>::setRight(Expression<T>* _right){
+	void BinaryExpressionModel<T>::setRight(Expression<T>* _right){
 		right = _right;
 	}
 
